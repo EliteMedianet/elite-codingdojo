@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"  ng-app="CodingDojoApp">
+<head>
+    <meta charset="utf-8">
+    <title>Coding Dojo : Elitepartner</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="ExampleController">
+
+<p>{{test}}</p>
+<li>{{data.name}}</li>
+<li>{{data.number}}</li>
+<ol>
+<li ng-repeat="entry in data.entries">{{entry}}</li>
+</ol>
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Elitepartner Coding Dojo</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+        <link rel="stylesheet" href="ep.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+        <script src="reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Coding Dojo</h1>
+					<h3>EliteMedianet GmbH</h3>
+					<p>
+						<small><a href="mailto:kolja.markwardt@elitepartner.de">Kolja Markwardt</a></small>
+					</p>
+				</section>
+
+                <section>
+                    <h2>Was soll das?</h2>
+                    <ul>
+                        <li>Programmieren ist eine Fertigkeit, die trainiert werden muss
+                        <li>Im Alltag oft nicht die Zeit, alles "richtig" zu machen
+                        <li>Dojo bietet einen Rahmen für Training
+                        <li>Gemeinsames reflektieren über Code
+                        <li>Spaß am Coden!
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Ziele</h2>
+                    <ul>
+                        <li>Sauberes Arbeiten (Clean Code)
+                        <li>Test-Driven
+                        <li>Laut denken und reflektieren
+                        <li>Ergebnis ist zweitrangig
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Agenda</h2>
+                    <ul>
+                        <li>Aufgabenstellung
+                        <li>Programmieren (40 min)
+                        <li>10 min Pause
+                        <li>Programmieren (40 min)
+                        <li>Roundup und Reflexion
+                        <li>Lockerer Austausch bei Bier&amp;Bagels
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Aufgabe: Persönlichkeitstest</h2>
+                        <img src="images/persoenlichkeitstest.jpg"/>
+                    </section>
+
+                    <section>
+                        <h2>Aufgabe: Persönlichkeitstest</h2>
+                            <pre><code class="json" contenteditable>
+                                {"name":"A Test","questions":[{"title":"Was für ein Tier bist du?","choices":[{"title":"Hund","score":0},{"title":"Maus","score":2},{"title":"Katze","score":5}]},{"title":"Wenn du ein Instrument wärst, was wärst du dann?","choices":[{"title":"Geige","score":3},{"title":"Klavier","score":6},{"title":"Gitarre","score":0}]}],"results":[{"maxScore":2,"description":"Was bist du denn für einer?"},{"maxScore":5,"description":"Du bist ja einer!"},{"maxScore":11,"description":"So einer bist du also!"}]}
+                            </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Aufgabe: Persönlichkeitstest</h2>
+                        <ul>
+                            <li>Anzeige des Tests als Webseite
+                            <li>Test ausfüllen
+                            <li>Zum Server schicken und Auswertung anzeigen
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Architektur</h2>
+                    <img src="images/architecture.png"/>
+                </section>
+
+                <section>
+                    <h1>Los geht's!</h1>
+                </section>
+
+            </div>
+
+		</div>
+
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

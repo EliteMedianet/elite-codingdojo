@@ -1,0 +1,2 @@
+mongoimport.exe -d dojo -c example initialData_example.js
+mongoimport.exe -d dojo -c test initialData_test.js
