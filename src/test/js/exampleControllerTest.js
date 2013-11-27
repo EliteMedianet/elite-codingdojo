@@ -12,11 +12,11 @@ describe('Controller: ExampleController', function () {
         httpBackend = $httpBackend;
         http = $http;
         controller = $controller;
-        httpBackend.when("GET", "example/Foobar.json").respond(data);
     }));
 
     it('should GET example data', function () {
         httpBackend.expectGET('example/Foobar.json');
+        httpBackend.when("GET", "example/Foobar.json").respond(data);
         controller('ExampleController', {
             $scope: scope,
             $http: http
