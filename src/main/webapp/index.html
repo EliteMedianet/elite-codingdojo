@@ -8,7 +8,8 @@
     <script src="lib/angular/angular.js"></script>
     <script src="js/controllers.js"></script>
 </head>
-<body ng-controller="ExampleController">
+<body >
+<div  ng-controller="ExampleController">
 
 <p>{{test}}</p>
 <li>{{data.name}}</li>
@@ -16,6 +17,12 @@
 <ol>
 <li ng-repeat="entry in data.entries">{{entry}}</li>
 </ol>
+</div>
+
+<div ng-controller="PersonalityTestController">
+    <h1>{{data.name}}</h1>
+
+</div>
 
 
 </body>
