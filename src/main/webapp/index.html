@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"  ng-app="CodingDojoApp">
+<html lang="en" ng-app="CodingDojoApp">
 <head>
     <meta charset="utf-8">
     <title>Coding Dojo : Elitepartner</title>
@@ -8,15 +8,21 @@
     <script src="lib/angular/angular.js"></script>
     <script src="js/controllers.js"></script>
 </head>
-<body ng-controller="ExampleController">
+<body ng-controller="PersonalityTestController">
 
-<p>{{test}}</p>
-<li>{{data.name}}</li>
-<li>{{data.number}}</li>
+<p>{{personalityTest.name}}</p>
+{{personalityTest}}
 <ol>
-<li ng-repeat="entry in data.entries">{{entry}}</li>
+    <li ng-repeat="question in personalityTest.questions">
+        <p>{{question.title}}</p>
+        <ul>
+            <li ng-repeat="choice in question.choices">
+                <input type="radio" ng-model="question.value" value="{{$index}}"> {{choice.title}}
+            </li>
+        </ul>
+    </li>
 </ol>
-
+<button ng-click="sendReply()">
 
 </body>
 </html>
